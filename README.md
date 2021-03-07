@@ -1,3 +1,19 @@
+Steps To Run Project :
+ - Composer update
+ - Create Copy OF enviroment example file and rename to (.env)
+ - php artisan key:generate
+ - create empty database at phpmyadmin (recipes_uae) 
+ - Php artisan migrate:fresh 
+ - php artisan serve
+ - To Access To FrontEnd (http://127.0.0.1:8000/)
+ - API Route Listen Port (8000) 
+  (http://127.0.0.1:8000/api/{{route name}} )
+ 
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
