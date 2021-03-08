@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Ingredient;
+use App\Recingredient;
 use Illuminate\Http\Request;
 
 class IngredientController extends Controller
