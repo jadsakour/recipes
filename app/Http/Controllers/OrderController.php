@@ -136,13 +136,14 @@ class OrderController extends Controller
 
             $ingradiants_arr[$c]['id'] = $allingradiants[$c]['id'];
             $ingradiants_arr[$c]['name'] = $allingradiants[$c]['name'];
+            $ingradiants_arr[$c]['name'] = $allingradiants[$c]['measure'];
             $ingradiants_arr[$c]['qu'] = 0;
         }
         $recdetials = Recingredient::all();
         for ($k = 0; $k < count($rec_arr); $k++) {
             for ($ck = 0; $ck < count($recdetials); $ck++) {
                 if ($rec_arr[$k] == $recdetials[$ck]['recipes_id']) {
-                    for ($f = 0; $f < count($ingradiants_arr) / 3; $f++) {
+                    for ($f = 0; $f < count($ingradiants_arr) / 4; $f++) {
                         if ($ingradiants_arr[$f]['id'] == $recdetials[$ck]['ingredients_id']) {
                             $ingradiants_arr[$f]['qu'] += $recdetials[$ck]['quantity'];
                         }
