@@ -34,7 +34,24 @@ class IngredientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $new_ing = new Ingredient();
+        $new_ing->name = $request->name;
+        $new_ing->measure = $request->measure;
+        $new_ing->supplier_name = $request->supplier_name;
+        $new_ing->description = $$request->description;
+        $new_ing->save();
+        if ($new_ing == null)
+         {
+            return   response()->json([
+                $new_ing, "message" => "Added New Ingrediant"
+            ], 200);
+        }
+         else 
+         {
+            return  response()->json([
+                "message" => "No Things Add"
+            ], 404);
+        }
     }
 
     /**
