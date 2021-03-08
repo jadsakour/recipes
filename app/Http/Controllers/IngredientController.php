@@ -15,7 +15,11 @@ class IngredientController extends Controller
      */
     public function index()
     {
-        //
+        $all_ing=Ingredient::all();
+        return   response()->json([
+                $all_ing, "message" => "View ALl Ingrediants"
+            ], 200);
+        
     }
 
     /**
@@ -25,7 +29,7 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
